@@ -55,7 +55,7 @@ module RailsSqlViews
 
       private
       def convert_statement(s)
-        s.gsub!(/.* AS (select .*)/, '\1').gsub!(/`#{@connection.current_database}`\./, '')
+        s.gsub!(/.* AS (select .*)/, '\1').gsub!(/`#{current_database}`\./, '')
       end
     end
   end
